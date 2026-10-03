@@ -71,24 +71,6 @@
   });
   document.getElementById("projects-list").innerHTML = projHTML;
 
-  var writingHTML = "";
-  Object.keys(BLOG_DATA).forEach(function (slug) {
-    var post = BLOG_DATA[slug];
-    writingHTML += '<li class="entry"><div class="entry-header">';
-    writingHTML += '<h3><a href="post.html?post=' + slug + '">' + post.title + "</a></h3>";
-    writingHTML += '<span class="entry-date">' + post.date + "</span>";
-    writingHTML += "</div>";
-    if (post.preview) {
-      writingHTML += "<p>" + post.preview + "</p>";
-    }
-    writingHTML += "</li>";
-  });
-  var writingEl = document.getElementById("writing-list");
-  if (writingHTML) {
-    writingEl.innerHTML = writingHTML;
-  } else {
-    writingEl.parentElement.style.display = "none";
-  }
 
   if (site.email) {
     document.getElementById("contact-info").innerHTML =
