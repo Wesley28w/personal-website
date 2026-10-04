@@ -74,6 +74,21 @@
 
   if (site.email) {
     document.getElementById("contact-info").innerHTML =
-      '<a href="mailto:' + site.email + '">' + site.email + "</a>";
+      "Want to chat, ask a question, or just say hi? Reach me anytime.";
+  }
+
+  var contactLinksHTML = "";
+  if (site.email) {
+    contactLinksHTML += '<a href="mailto:' + site.email + '">' + site.email + "</a>";
+  }
+  if (site.social && site.social.github) {
+    contactLinksHTML += '<a href="' + site.social.github + '" target="_blank" rel="noopener">GitHub</a>';
+  }
+  if (site.social && site.social.linkedin) {
+    contactLinksHTML += '<a href="' + site.social.linkedin + '" target="_blank" rel="noopener">LinkedIn</a>';
+  }
+  var contactLinksEl = document.getElementById("contact-links");
+  if (contactLinksEl) {
+    contactLinksEl.innerHTML = contactLinksHTML;
   }
 })();

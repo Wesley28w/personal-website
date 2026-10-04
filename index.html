@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <canvas id="particle-canvas"></canvas>
   <div class="page">
 
     <header class="section" id="intro">
@@ -50,14 +51,30 @@
       <ul class="entry-list" id="projects-list"></ul>
     </section>
 
-    <footer class="section" id="contact">
-      <h2>Contact</h2>
-      <p id="contact-info"></p>
-    </footer>
+    <section class="section cta-section" id="cta">
+      <div class="cta-grid">
+        <div class="cta-card">
+          <h3>Sponsor</h3>
+          <p>Supporting my CubeSat team, research, or robotics projects? I'm always looking for sponsors and partners who believe in student-led engineering.</p>
+          <a href="mailto:wesleycwong@email.com?subject=Sponsorship" class="cta-link">Get in touch &rarr;</a>
+        </div>
+        <div class="cta-card">
+          <h3>Collaborate</h3>
+          <p>Interested in working together on research, open-source projects, or robotics? I'm open to collaborations with other builders and researchers.</p>
+          <a href="mailto:wesleycwong@email.com?subject=Collaboration" class="cta-link">Reach out &rarr;</a>
+        </div>
+        <div class="cta-card">
+          <h3>Contact</h3>
+          <p id="contact-info"></p>
+          <div class="contact-links" id="contact-links"></div>
+        </div>
+      </div>
+    </section>
 
   </div>
   <script src="js/site-data.js"></script>
   <script src="js/gallery-data.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/particles.js"></script>
 </body>
 </html>
